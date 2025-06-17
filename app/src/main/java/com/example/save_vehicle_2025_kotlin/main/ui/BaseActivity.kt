@@ -52,38 +52,4 @@ abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatAct
         }
     }
 
-    // check network connect
-    fun isNetworkConnected(context: Context): Boolean {
-        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val network = connectivityManager.activeNetwork
-        if (network==null){
-            errorNetWork()
-            return false
-        }
-        val networkCapabilities = connectivityManager.getNetworkCapabilities(network)
-
-        if (networkCapabilities == null){
-            errorNetWork()
-            return false
-        }
-
-        return when {
-            networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
-            networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
-            networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
-            else -> {
-                errorNetWork()
-                false
-            }
-        }
-    }
-
-    // show popup error network
-    private fun errorNetWork(){
-        val progressDialog = ProgressDialog(this)
-        progressDialog.setMessage("No Internet Connection")
-        progressDialog.setCancelable(false)
-        progressDialog.show()
-    }
-
 }

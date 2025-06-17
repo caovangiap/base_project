@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.example.save_vehicle_2025_kotlin.main.utils.isNetworkConnected
 
 abstract class BaseFragment<VB : ViewBinding, VM : BaseViewModel> : Fragment() {
 
@@ -30,7 +31,7 @@ abstract class BaseFragment<VB : ViewBinding, VM : BaseViewModel> : Fragment() {
 
     fun isNetworkConnected(): Boolean {
         if (activity is BaseActivity<*, *>) {
-            return (activity as BaseActivity<*, *>).isNetworkConnected(requireContext())
+            return requireContext().isNetworkConnected(requireContext())
         }
         return false
     }
