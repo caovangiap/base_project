@@ -1,4 +1,4 @@
-package com.example.save_vehicle_2025_kotlin.main.utils
+package com.example.save_vehicle_2025_kotlin.base.utils
 
 import android.content.Context
 import android.content.SharedPreferences

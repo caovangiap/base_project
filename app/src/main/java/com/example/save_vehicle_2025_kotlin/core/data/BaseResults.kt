@@ -1,4 +1,4 @@
-package com.example.save_vehicle_2025_kotlin.main.data
+package com.example.save_vehicle_2025_kotlin.core.data
 
 import androidx.lifecycle.MutableLiveData
 

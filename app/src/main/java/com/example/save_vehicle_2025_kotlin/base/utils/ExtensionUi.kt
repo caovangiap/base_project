@@ -1,4 +1,4 @@
-package com.example.save_vehicle_2025_kotlin.main.utils
+package com.example.save_vehicle_2025_kotlin.base.utils
 
 import android.app.AlertDialog
 import android.content.Context

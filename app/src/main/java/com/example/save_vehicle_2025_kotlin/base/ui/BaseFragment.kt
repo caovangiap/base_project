@@ -1,4 +1,4 @@
-package com.example.save_vehicle_2025_kotlin.main.ui
+package com.example.save_vehicle_2025_kotlin.base.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import com.example.save_vehicle_2025_kotlin.main.utils.isNetworkConnected
+import com.example.save_vehicle_2025_kotlin.base.utils.isNetworkConnected
 
 abstract class BaseFragment<VB : ViewBinding, VM : BaseViewModel> : Fragment() {
 

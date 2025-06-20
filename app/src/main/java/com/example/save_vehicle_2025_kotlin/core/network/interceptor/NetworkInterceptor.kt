@@ -1,16 +1,17 @@
-package com.example.save_vehicle_2025_kotlin.main.network
+package com.example.save_vehicle_2025_kotlin.core.network.interceptor
 
 import android.content.Context
 import android.os.Build
-import android.util.Log
 import androidx.annotation.RequiresExtension
-import com.example.save_vehicle_2025_kotlin.main.utils.BuildConfig
-import com.example.save_vehicle_2025_kotlin.main.utils.RxPreferences
-import com.example.save_vehicle_2025_kotlin.main.utils.isNetworkConnected
+import com.example.save_vehicle_2025_kotlin.core.network.ApiException
+import com.example.save_vehicle_2025_kotlin.base.utils.BuildConfig
+import com.example.save_vehicle_2025_kotlin.base.utils.RxPreferences
+import com.example.save_vehicle_2025_kotlin.base.utils.isNetworkConnected
 import com.google.gson.Gson
 import okhttp3.Interceptor
 import okhttp3.Response
 import okio.IOException
+import timber.log.Timber
 import java.net.HttpURLConnection
 import java.net.URL
 import java.nio.charset.Charset
@@ -24,7 +25,7 @@ class NetworkInterceptor @Inject constructor(
     private val gson: Gson,
     private val rxPreferences: RxPreferences,
 
-) : Interceptor {
+    ) : Interceptor {
 
     @RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
     override fun intercept(chain: Interceptor.Chain): Response {
@@ -35,9 +36,9 @@ class NetworkInterceptor @Inject constructor(
             throw IOException("No network connection")
         } else {
             try {
-                Log.d("NetworkInterceptor", "intercept: $request")
+                Timber.tag("NetworkInterceptor").e("NetworkInterceptor\", \"intercept: $request")
                 for ((key, value) in request.headers) {
-                    Log.d("NetworkInterceptor","Header Check:$key: $value")
+                    Timber.tag("NetworkInterceptor").e("NetworkInterceptor :Header Check:$key: $value")
                 }
                 val response = chain.proceed(request)
                 val responseBody = response.body

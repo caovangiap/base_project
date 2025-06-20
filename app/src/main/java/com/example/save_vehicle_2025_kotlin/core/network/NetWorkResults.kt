@@ -1,4 +1,4 @@
-package com.example.save_vehicle_2025_kotlin.main.network
+package com.example.save_vehicle_2025_kotlin.core.network
 
 import retrofit2.HttpException
 import java.io.IOException
