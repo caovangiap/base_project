@@ -4,7 +4,7 @@ import android.content.Context
 import android.os.Build
 import androidx.annotation.RequiresExtension
 import com.example.save_vehicle_2025_kotlin.core.network.ApiException
-import com.example.save_vehicle_2025_kotlin.base.utils.BuildConfig
+import com.example.save_vehicle_2025_kotlin.base.utils.ConstantValue
 import com.example.save_vehicle_2025_kotlin.base.utils.RxPreferences
 import com.example.save_vehicle_2025_kotlin.base.utils.isNetworkConnected
 import com.google.gson.Gson
@@ -91,7 +91,7 @@ class NetworkInterceptor @Inject constructor(
     }
 
     private fun refreshToken(): Boolean {
-        val refreshUrl = URL("${BuildConfig.BASE_URL}/api/vhome/refresh/v6")
+        val refreshUrl = URL("${ConstantValue.BASE_URL}/api/vhome/refresh/v6")
         val urlConnection = refreshUrl.openConnection() as HttpURLConnection
         urlConnection.apply {
             doInput = true

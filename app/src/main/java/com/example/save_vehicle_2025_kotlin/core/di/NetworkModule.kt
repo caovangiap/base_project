@@ -3,14 +3,13 @@ package com.example.save_vehicle_2025_kotlin.core.di
 import com.example.save_vehicle_2025_kotlin.core.data.remote.UserApiService
 import com.example.save_vehicle_2025_kotlin.core.network.RetrofitFactory
 import com.example.save_vehicle_2025_kotlin.core.network.interceptor.NetworkInterceptor
-import com.example.save_vehicle_2025_kotlin.base.utils.BuildConfig
+import com.example.save_vehicle_2025_kotlin.base.utils.ConstantValue
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -36,7 +35,7 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
-        return RetrofitFactory.createRetrofit(BuildConfig.BASE_URL, okHttpClient)
+        return RetrofitFactory.createRetrofit(ConstantValue.BASE_URL, okHttpClient)
     }
 
     @Provides @Singleton

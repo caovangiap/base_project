@@ -1,16 +1,12 @@
 package com.example.save_vehicle_2025_kotlin.base.ui
 
-import android.app.ProgressDialog
-import android.content.Context
-import android.net.ConnectivityManager
-import android.net.NetworkCapabilities
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 import com.airbnb.lottie.LottieAnimationView
 import com.example.save_vehicle_2025_kotlin.R
-import com.example.save_vehicle_2025_kotlin.databinding.BaseActivityBinding
+import timber.log.Timber
 
 abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatActivity() {
 
@@ -24,12 +20,13 @@ abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatAct
         super.onCreate(savedInstanceState)
         viewBinding = getViewBinding()
         setContentView(viewBinding.root)
-        initView()
-        listenStateView()
+
     }
 
     override fun onStart() {
         super.onStart()
+        initView()
+        listenStateView()
     }
 
     override fun onPause() {
@@ -37,19 +34,21 @@ abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatAct
     }
 
 
-    fun showLoading() {
-        viewBinding.root.findViewById<LottieAnimationView>(R.id.icLoading).apply {
-            visibility = View.VISIBLE
-            playAnimation()
-        }
-    }
-
-
-    fun dismissLoading() {
-        viewBinding.root.findViewById<LottieAnimationView>(R.id.icLoading).apply {
-            visibility = View.GONE
-            pauseAnimation()
-        }
-    }
+//    fun showLoading() {
+//        viewBinding.root.findViewById<LottieAnimationView>(R.id.icLoading).apply {
+//            visibility = View.VISIBLE
+//            playAnimation()
+//        }
+//        Timber.tag("test loading").e("showLoading")
+//    }
+//
+//
+//    fun hideLoading() {
+//        viewBinding.root.findViewById<LottieAnimationView>(R.id.icLoading).apply {
+//            visibility = View.GONE
+//            pauseAnimation()
+//        }
+//        Timber.tag("test loading").e("hideLoading")
+//    }
 
 }
