@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.kotlin.kapt)
-
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -30,20 +30,24 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
     buildFeatures {
         buildConfig = true
         viewBinding true
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion "1.5.0"
     }
 }
 
 dependencies {
-
+    implementation(project(":core"))
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat
     implementation libs.material
@@ -63,4 +67,22 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation(libs.timber)
+
+    // Core Compose libraries
+    implementation libs.compose.ui
+    implementation libs.compose.foundation
+    implementation libs.compose.material3
+    implementation libs.compose.runtime
+    implementation libs.compose.ui.viewbinding
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    debugImplementation(libs.androidx.compose.ui.tooling)
+
+    // Activity Compose (cho ComposeView)
+    implementation libs.activity.compose
+
+    // Tùy chọn: Navigation, ViewModel, Coil, Hilt
+    implementation libs.navigation.compose
+    implementation libs.lifecycle.viewmodel.compose
+    implementation libs.coil.compose
+    implementation libs.hilt.navigation.compose
 }

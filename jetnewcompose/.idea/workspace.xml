@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dc98ebdc-7ade-4924-a7ba-98a358d8d35a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/base/utils/AppToolBar.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/base/utils/MessageCard.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/base/utils/StyleText.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/data/AuthRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_jetnews_logo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_search.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/androidTest/java/com/example/jetnewcompose/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jetnewcompose/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jetnewcompose/ui/theme/Color.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jetnewcompose/ui/theme/Theme.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jetnewcompose/ui/theme/Type.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/jetnewcompose/ExampleUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/base/ui/BaseActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/base/ui/BaseActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/base/utils/ConstantValue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/base/utils/ConstantValue.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/data/BaseResults.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/data/BaseResults.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/data/LoginResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/data/LoginResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/data/remote/UserApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/data/remote/UserApiService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/data/remote/UserRemoteDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/data/remote/UserRemoteDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/data/repository/UserRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/data/repository/UserRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/data/repository/UserRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/data/repository/UserRepositoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/di/NetworkModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/di/NetworkModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/network/interceptor/NetworkInterceptor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/core/network/interceptor/NetworkInterceptor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/main/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/main/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/main/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/save_vehicle_2025_kotlin/main/MainViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "caovangiap"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/caovangiap/base_project.git",
+    "accountId": "6f1d89f1-7fe2-4292-b41f-73d72d9e8397"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="30GrgoVBAMFixxjcW9Dl70lgVkI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "android.gradle.sync.needed": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "test__jetpack",
+    "last_opened_file_path": "D:/save_vehicle_2025_kotlin/jetnewcompose"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc98ebdc-7ade-4924-a7ba-98a358d8d35a" name="Changes" comment="" />
+      <created>1753264864615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753264864615</updated>
+    </task>
+    <servers />
+  </component>
+</project>

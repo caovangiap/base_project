@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">save_vehicle_2025_kotlin</string>
+    <string name="title_tool_bar">Search</string>
 </resources>
