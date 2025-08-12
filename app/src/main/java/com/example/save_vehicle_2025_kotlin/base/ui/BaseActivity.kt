@@ -2,13 +2,16 @@ package com.example.save_vehicle_2025_kotlin.base.ui
 
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
 import androidx.viewbinding.ViewBinding
 import com.airbnb.lottie.LottieAnimationView
 import com.example.save_vehicle_2025_kotlin.R
+import com.example.save_vehicle_2025_kotlin.main.navigation.BaseNavigation
 import timber.log.Timber
 
-abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatActivity() {
+abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatActivity(),BaseNavigation {
 
     private lateinit var viewBinding : VB
     abstract fun getViewBinding(): VB
@@ -33,22 +36,8 @@ abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatAct
         super.onPause()
     }
 
-
-//    fun showLoading() {
-//        viewBinding.root.findViewById<LottieAnimationView>(R.id.icLoading).apply {
-//            visibility = View.VISIBLE
-//            playAnimation()
-//        }
-//        Timber.tag("test loading").e("showLoading")
-//    }
-//
-//
-//    fun hideLoading() {
-//        viewBinding.root.findViewById<LottieAnimationView>(R.id.icLoading).apply {
-//            visibility = View.GONE
-//            pauseAnimation()
-//        }
-//        Timber.tag("test loading").e("hideLoading")
-//    }
+    override fun openScreen(@IdRes action: Int) {
+        this.findNavController(R.id.nav_host).navigate(action)
+    }
 
 }
