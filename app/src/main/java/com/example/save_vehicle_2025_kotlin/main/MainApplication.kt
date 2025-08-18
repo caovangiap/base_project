@@ -14,5 +14,7 @@ class MainApplication : Application(){
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }
+
+        Timber.tag("MainApplication").e("onCreate")
     }
 }
