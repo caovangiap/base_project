@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 
 data class BaseResults<out T> (
     val code : Int,
-    val data: BaseResults<Nothing>
+    val data: BaseResults<Nothing>?
 ){
     fun successCall() :Boolean{
         return code == 200

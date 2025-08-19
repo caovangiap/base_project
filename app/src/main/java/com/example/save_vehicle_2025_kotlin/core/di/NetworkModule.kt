@@ -1,6 +1,6 @@
 package com.example.save_vehicle_2025_kotlin.core.di
 
-import com.example.save_vehicle_2025_kotlin.core.data.remote.UserApiService
+import com.example.save_vehicle_2025_kotlin.core.data.apis.UserApiService
 import com.example.save_vehicle_2025_kotlin.core.network.RetrofitFactory
 import com.example.save_vehicle_2025_kotlin.core.network.interceptor.NetworkInterceptor
 import com.example.save_vehicle_2025_kotlin.base.utils.ConstantValue

@@ -1,4 +1,4 @@
-package com.example.save_vehicle_2025_kotlin.core.data.remote
+package com.example.save_vehicle_2025_kotlin.core.data.apis
 
 import com.example.save_vehicle_2025_kotlin.core.data.LoginResponse
 import retrofit2.http.GET
