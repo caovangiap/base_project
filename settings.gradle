@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "save_vehicle_2025_kotlin"
 include ':app'
+include ':navigation'
+include ':featureHome'
+include ':base'
