@@ -17,7 +17,7 @@
         >
 
 
-        <activity android:name="com.example.baseapp.MainActivity"
+        <activity android:name=".main.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Save_vehicle_2025_kotlin"
             android:windowSoftInputMode="adjustPan"

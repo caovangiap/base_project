@@ -1,4 +1,4 @@
-package com.example.navigation
+package com.example.baseapp.main.navigation
 
 import androidx.core.net.toUri
 import androidx.navigation.NavController

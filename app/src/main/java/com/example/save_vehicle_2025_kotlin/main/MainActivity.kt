@@ -1,8 +1,9 @@
-package com.example.baseapp
+package com.example.save_vehicle_2025_kotlin.main
 
 import android.os.Bundle
 import com.example.baseapp.base.ui.BaseActivity
-import com.example.navigation.databinding.MainActivityBinding
+import com.example.baseapp.main.MainViewModel
+import com.example.save_vehicle_2025_kotlin.databinding.MainActivityBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

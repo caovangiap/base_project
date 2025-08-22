@@ -3,13 +3,12 @@ package com.example.featurehome
 import android.os.Bundle
 import android.view.View
 import com.airbnb.lottie.LottieDrawable
-import com.example.baseapp.MainViewModel
+import com.example.baseapp.main.MainViewModel
 import com.example.baseapp.base.ui.BaseFragment
-import com.example.navigation.databinding.FragmentFirstBinding
-import com.example.navigation.featureHome.NavigationHome
+import com.example.featurehome.databinding.FragmentFirstBinding
+import com.example.featurehome.featureHome.NavigationHome
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
-import com.example.navigation.R
 import timber.log.Timber
 
 @AndroidEntryPoint

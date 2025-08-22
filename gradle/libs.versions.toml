@@ -25,6 +25,7 @@ timber = "5.0.1"
 coroutines = "1.7.1"
 legacySupportV4 = "1.0.0"
 annotation = "1.6.0"
+viewbindingVersion = "8.12.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -59,6 +60,7 @@ coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", ve
 coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
 androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+androidx-viewbinding = { group = "androidx.databinding", name = "viewbinding", version.ref = "viewbindingVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

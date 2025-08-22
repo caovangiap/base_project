@@ -1,4 +1,4 @@
-package com.example.navigation
+package com.example.baseapp.main.navigation
 
 import android.os.Bundle
 import androidx.annotation.IdRes

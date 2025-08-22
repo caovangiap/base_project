@@ -58,8 +58,11 @@ dependencies {
     androidTestImplementation libs.androidx.espresso.core
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
     implementation(libs.timber)
+    implementation libs.lottie
 
     implementation project(":base")
-    implementation project(":navigation")
+    implementation project(":featureHome")
 }

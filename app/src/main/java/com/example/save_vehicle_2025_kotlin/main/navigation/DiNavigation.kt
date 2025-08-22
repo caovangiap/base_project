@@ -1,15 +1,18 @@
-package com.example.navigation
+package com.example.save_vehicle_2025_kotlin.main.navigation
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
 import androidx.navigation.fragment.NavHostFragment
-import com.example.navigation.featureHome.NavigationHome
-import com.example.navigation.featureHome.NavigationHomeIml
+import com.example.baseapp.main.navigation.BaseNavigation
+import com.example.featurehome.featureHome.NavigationHome
+import com.example.featurehome.featureHome.NavigationHomeIml
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.scopes.ActivityScoped
 import dagger.hilt.android.components.ActivityComponent
+import dagger.hilt.android.scopes.ActivityScoped
+import com.example.save_vehicle_2025_kotlin.R
+
 @Module
 @InstallIn(ActivityComponent::class)
 object DiNavigation {
@@ -30,7 +33,7 @@ object DiNavigation {
 
     @ActivityScoped
     @Provides
-    fun provideNavigationHome(navigationHomeIml: NavigationHomeIml): NavigationHome{
+    fun provideNavigationHome(navigationHomeIml: NavigationHomeIml): NavigationHome {
         return navigationHomeIml
     }
 }

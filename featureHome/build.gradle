@@ -29,6 +29,10 @@ android {
     kotlinOptions {
         jvmTarget = '11'
     }
+    buildFeatures {
+        buildConfig = true
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -45,6 +49,5 @@ dependencies {
     implementation(libs.navigation.ui)
     implementation(libs.timber)
     implementation libs.lottie
-    implementation project(":navigation")
     implementation project(":base")
 }

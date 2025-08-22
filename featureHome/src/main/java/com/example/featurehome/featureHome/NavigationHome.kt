@@ -1,4 +1,4 @@
-package com.example.navigation.featureHome
+package com.example.featurehome.featureHome
 
 import androidx.annotation.IdRes
 

@@ -1,8 +1,8 @@
-package com.example.navigation.featureHome
+package com.example.featurehome.featureHome
 
-import com.example.navigation.BaseNavigation
+import com.example.baseapp.main.navigation.BaseNavigation
 import javax.inject.Inject
-import com.example.navigation.R
+import com.example.featurehome.R
 
 class NavigationHomeIml @Inject constructor(
     private val navigation: BaseNavigation
