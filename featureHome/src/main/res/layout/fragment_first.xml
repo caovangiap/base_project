@@ -18,6 +18,7 @@
         app:lottie_rawRes="@raw/ic_loading"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
+        android:visibility="visible"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

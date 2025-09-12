@@ -63,5 +63,7 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation(libs.timber)
+    implementation libs.coroutines.core
+    implementation libs.coroutines.android
 
 }

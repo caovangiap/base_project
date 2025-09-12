@@ -4,16 +4,12 @@ import android.content.Context
 import android.os.Build
 import androidx.annotation.RequiresExtension
 import com.example.baseapp.core.network.ApiException
-import com.example.baseapp.base.utils.ConstantValue
-import com.example.baseapp.base.utils.RxPreferences
 import com.example.baseapp.base.utils.isNetworkConnected
 import com.google.gson.Gson
 import okhttp3.Interceptor
 import okhttp3.Response
 import okio.IOException
 import timber.log.Timber
-import java.net.HttpURLConnection
-import java.net.URL
 import java.nio.charset.Charset
 import javax.inject.Inject
 
@@ -23,8 +19,6 @@ import javax.inject.Inject
 class NetworkInterceptor @Inject constructor(
     private val context: Context,
     private val gson: Gson,
-    private val rxPreferences: RxPreferences,
-
     ) : Interceptor {
 
     @RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
@@ -52,33 +46,22 @@ class NetworkInterceptor @Inject constructor(
 
                     }
                     400, 402, 403, 404, 405, 409 -> {
-                        if (errorResponse.code == 2003) {
-                            if (request.url.toString().endsWith("/login") || request.url.toString().endsWith("/otp/vhome")) {
 
-                            }
-                        } else {
-
-                        }
                     }
                     2019 ->{
+
                     }
                     else -> {
                         when (errorResponse.code) {
-                            2003 -> {}
+                            2003 -> {
+
+                            }
                             else -> {
+
                             }
                         }
                     }
 
-                }
-                when (errorResponse.errorCode) {
-                    800033 -> {
-                    }
-                }
-                when (errorResponse.code) {
-                    10001 -> {
-
-                    }
                 }
                 return response
             } catch (e: Exception) {
@@ -88,19 +71,5 @@ class NetworkInterceptor @Inject constructor(
             }
             return chain.proceed(request)
         }
-    }
-
-    private fun refreshToken(): Boolean {
-        val refreshUrl = URL("${ConstantValue.BASE_URL}/api/vhome/refresh/v6")
-        val urlConnection = refreshUrl.openConnection() as HttpURLConnection
-        urlConnection.apply {
-            doInput = true
-            setRequestProperty("RefreshToken", rxPreferences.getRefreshToken())
-            requestMethod = "GET"
-            useCaches = false
-            connectTimeout = 10000
-            readTimeout = 15000
-        }
-        return true
     }
 }

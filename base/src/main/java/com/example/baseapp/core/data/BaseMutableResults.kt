@@ -1,9 +1,9 @@
 package com.example.baseapp.core.data
 
-
-data class BaseResults<out T> (
+data class BaseMutableResults <out T> (
     val code : Int,
-    val data: T?
+    val data: MutableList<Nothing>,
+    val message: String
 ){
     fun successCall() :Boolean{
         return code == 200
