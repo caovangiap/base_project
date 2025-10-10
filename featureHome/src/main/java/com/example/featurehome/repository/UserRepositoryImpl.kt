@@ -1,14 +1,19 @@
 package com.prodigy.feature.girlfriend.repository
 
 import android.content.Context
+import com.example.baseapp.base.utils.ConstantValue
 import com.example.baseapp.base.utils.RxPreferences
 import com.example.baseapp.core.data.ApiResult
 import com.example.baseapp.core.data.JwtBaseToken
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.prodigy.feature.girlfriend.model.DataRequestEncryptModel
 
 import com.prodigy.feature.girlfriend.model.getToken.JwtTokenDecodeModel
+import com.prodigy.feature.girlfriend.model.refreshToken.RefreshTokenDecodeModel
+import com.prodigy.feature.girlfriend.model.refreshToken.RefreshTokenRequest
 import com.prodigy.feature.girlfriend.remote.GirlFriendRemoteDataSource
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
@@ -23,6 +28,7 @@ import javax.inject.Singleton
 
 @Singleton
 class UserRepositoryImpl @Inject constructor(
+    @ApplicationContext
     private val context: Context,
     private val remoteDataSource: GirlFriendRemoteDataSource,
     private val jwtTokenValue: JwtBaseToken,
@@ -58,6 +64,16 @@ class UserRepositoryImpl @Inject constructor(
     ): Flow<ApiResult<JwtTokenDecodeModel>> = flow {
         emit(ApiResult.Loading)
 
+    }.flowOn(Dispatchers.IO)
+
+    override suspend fun refreshToken(): Flow<ApiResult<RefreshTokenDecodeModel>> = flow {
+        emit(ApiResult.Loading)
+        try {
+
+
+        } catch (e: Exception) {
+            emit(ApiResult.Error(e, e.message ?: "Unknown error"))
+        }
     }.flowOn(Dispatchers.IO)
 
 }

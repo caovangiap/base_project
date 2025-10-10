@@ -38,4 +38,5 @@ import retrofit2.Response
 
 interface UserRepository {
     suspend fun fetchToken(packageName: String, firebaseToken: String, tokenGoogle: String?): Flow<ApiResult<JwtTokenDecodeModel>>
+    suspend fun refreshToken(): Flow<ApiResult<RefreshTokenDecodeModel>>
 }

@@ -1,6 +1,5 @@
 package com.prodigy.feature.girlfriend.model.discover.search
 
-import com.android.ai.girl.cache.domain.entity.CharacterLocal
 import com.google.gson.annotations.SerializedName
 
 data class DataSearch(
@@ -14,20 +13,4 @@ data class DataSearch(
     val name: String,
     @SerializedName("persona_tags")
     var personaTags: List<PersonaTagPaginationSearch> ? =null
-){
-    fun toCharacterLocal() = CharacterLocal(
-        id = id,
-        categoryId = null,
-        name = name,
-        introduction = introduction,
-        personality = null,
-        languageCharacteristics = null,
-        characterRelationship = null,
-        preview = null,
-        age = null,
-        gender = null,
-        imageLink = imageLink,
-    )
-
-    fun toPersonaTagLocalList() = personaTags?.map { it.toPersonaTagLocal() } ?: listOf()
-}
+)

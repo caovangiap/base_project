@@ -2,6 +2,7 @@ package com.prodigy.feature.girlfriend.model.character.createCharacter
 
 import kotlinx.serialization.SerialName
 
+
 data class CreateCharacterRequest(
     @SerialName("_id")
     val _id: String,

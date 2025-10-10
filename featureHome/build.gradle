@@ -3,11 +3,13 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.kotlin.kapt)
+    id 'kotlin-parcelize'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.9.0'
 }
 
 android {
     namespace 'com.example.featurehome'
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         minSdk 24
@@ -79,6 +81,7 @@ dependencies {
 
     implementation libs.glide.transformations
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3"
 
     // Groupie: https://github.com/lisawray/groupie
     implementation(libs.groupie)

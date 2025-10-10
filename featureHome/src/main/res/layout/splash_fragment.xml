@@ -24,7 +24,6 @@
 
         <TextView
             android:id="@+id/app_name"
-            style="@style/TextViewBoldTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FCFBFF"
@@ -32,7 +31,6 @@
             tools:text="AI Girlfriend" />
 
         <TextView
-            style="@style/TextViewRegularTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/txt_description_splash"

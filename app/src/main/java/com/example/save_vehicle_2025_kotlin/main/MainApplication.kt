@@ -2,6 +2,7 @@ package com.example.save_vehicle_2025_kotlin.main
 
 import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate
+import com.example.save_vehicle_2025_kotlin.BuildConfig
 
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber

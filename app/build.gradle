@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace 'com.example.save_vehicle_2025_kotlin'
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.example.save_vehicle_2025_kotlin"

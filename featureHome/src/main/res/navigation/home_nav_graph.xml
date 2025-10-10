@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/forYouFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.home.foryou.ForYouFragment"
+
         android:label="For You"
         tools:layout="@layout/foryou_fragment">
 
@@ -15,7 +15,6 @@
 
     <fragment
         android:id="@+id/discoverFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.home.discover.DiscoverFragment"
         android:label="Discover"
         tools:layout="@layout/discover_fragment">
 
@@ -23,7 +22,6 @@
 
     <fragment
         android:id="@+id/chatFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.home.chat.ChatFragment"
         android:label="Chat"
         tools:layout="@layout/chat_fragment">
 
@@ -31,7 +29,6 @@
 
     <fragment
         android:id="@+id/myCharacterFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.home.mycharacter.MyCharacterFragment"
         android:label="My Character"
         tools:layout="@layout/mycharacter_fragment">
 
@@ -39,7 +36,6 @@
 
     <fragment
         android:id="@+id/searchChildFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.home.discover.search_child.SearchChildFragment"
         android:label="SearchChildFragment"
         tools:layout="@layout/search_child_fragment"
         />

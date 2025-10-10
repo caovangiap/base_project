@@ -7,7 +7,6 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.splash.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/splash_fragment">
         <action
@@ -32,7 +31,6 @@
 
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.welcome.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/welcome_fragment">
         <action
@@ -55,7 +53,6 @@
 
     <fragment
         android:id="@+id/onboardingFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.onboarding.OnboardingFragment"
         android:label="fragment_onboarding"
         tools:layout="@layout/onboarding_fragment">
 
@@ -71,7 +68,6 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/home_fragemnt">
         <action
@@ -107,7 +103,6 @@
 
     <fragment
         android:id="@+id/searchChildFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.home.discover.search_child.SearchChildFragment"
         android:label="SearchChildFragment"
         tools:layout="@layout/search_child_fragment">
         <action
@@ -120,7 +115,6 @@
     </fragment>
     <fragment
         android:id="@+id/boxChatFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.home.chat.boxChat.BoxChatFragment"
         android:label="BoxChatFragment"
         tools:layout="@layout/chat_detail_fragment">
         <action
@@ -134,14 +128,12 @@
 
     <fragment
         android:id="@+id/createCharacterFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.home.mycharacter.create_character.CreateCharacterFragment"
         android:label="CreateCharacterFragment"
         tools:layout="@layout/create_character_fragment" />
     <fragment
         android:id="@+id/settingFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.home.setting.SettingFragment"
         android:label="SettingFragment"
-        tools:layout="@layout/setting_fragment">
+       >
         <action
             android:id="@+id/action_settingFragment_to_homeFragment"
             app:destination="@id/homeFragment"
@@ -154,12 +146,10 @@
     </fragment>
     <fragment
         android:id="@+id/reportFragment"
-        android:name="com.prodigy.feature.girlfriend.ui.home.chat.boxChat.report.ReportFragment"
         android:label="ReportFragment"
         tools:layout="@layout/report_character_screen" />
     <fragment
         android:id="@+id/boxChat2Fragment"
-        android:name="com.prodigy.feature.girlfriend.ui.home.chat.boxChat2.BoxChat2Fragment"
         android:label="BoxChat2Fragment"
         tools:layout="@layout/fragment_box_chat" />
 
