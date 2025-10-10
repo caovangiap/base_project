@@ -2,7 +2,7 @@ package com.example.baseapp.base.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.preference.Preference
+import androidx.core.content.edit
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -10,24 +10,43 @@ import javax.inject.Singleton
 @Singleton
 class RxPreferences @Inject constructor(
     @ApplicationContext private val context: Context
-){
+) {
     private val prefs: SharedPreferences by lazy {
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
     }
 
-    // Ví dụ các key bạn cần
-    private val KEY_USER_TOKEN        = prefs.getString("user_token", "")
-    private val KEY_REFRESH_TOKEN     = prefs.getString("refresh_token", "")
-    private val KEY_CAMERA_ACCESS     = prefs.getString("camera_access_token", "")
+    fun setJvmToken(token: String? = null) {
+        prefs.edit { putString(JVM_TOKEN, token ?: "") }
 
+    }
 
-    fun getRefreshToken(): String{
+    fun getJvmToken(): String? {
+        return prefs.getString(JVM_TOKEN, "")
+    }
 
-        return "new_token"
+    fun setRefreshToken(flag: String) {
+        prefs.edit { putString(FLAG_REFRESH_TOKEN, flag) }
+    }
+
+    fun getRefreshToken(): String? {
+        return prefs.getString(FLAG_REFRESH_TOKEN, "")
+    }
+
+    fun setNextCursor(cursor: Int) {
+        prefs.edit { putInt(Cursor_Pager, cursor) }
+    }
+
+    fun getNextCursor(): Int? {
+        return prefs.getInt(Cursor_Pager, 0)
     }
 
     companion object {
         private const val PREFS_NAME = "app_prefs"
+        private const val JVM_TOKEN = "JVM TOKEN"
+        private const val FLAG_REFRESH_TOKEN = "FLAG_REFRESH_TOKEN"
+
+        private const val Cursor_Pager = "Cursor_Pager"
+
     }
 
 }

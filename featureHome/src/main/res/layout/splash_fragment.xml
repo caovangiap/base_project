@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_bg_splash" />
+
+    <LinearLayout
+        android:id="@+id/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="64dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/app_name"
+            style="@style/TextViewBoldTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FCFBFF"
+            android:textSize="32sp"
+            tools:text="AI Girlfriend" />
+
+        <TextView
+            style="@style/TextViewRegularTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_description_splash"
+            android:textColor="#99FCFBFF"
+            android:textSize="20sp" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:max="100"
+            android:progress="0"
+            app:indicatorColor="#FF3374"
+            app:trackColor="#4B2D37"
+            app:trackStopIndicatorSize="0dp" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_onboarding"
+    android:theme="@style/Theme.AppCompat">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="14dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp"
+                android:background="@drawable/ib_back_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titleToolBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/create_character"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnContinue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelCharacterPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/character_photo"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/photoContainer"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_border_16"
+                android:backgroundTint="@color/color_27FFFFFF"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelCharacterPhoto">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icAddPhoto"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/ic_add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.4" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/photo"
+                    android:textColor="@color/color_hint_edit_text"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/icAddPhoto"
+                    app:layout_constraintVertical_bias="0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgCharacter"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_border_16"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="@+id/photoContainer"
+                app:layout_constraintTop_toTopOf="@id/photoContainer"
+                app:layout_constraintEnd_toEndOf="@id/photoContainer"
+                app:layout_constraintBottom_toBottomOf="@+id/photoContainer"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/Rounded16ImageView"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelCharacterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/character_name"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/photoContainer" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnRandomName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/lato_regular"
+                android:padding="8dp"
+                android:text="@string/random_ai"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/labelCharacterName"
+                app:layout_constraintBottom_toBottomOf="@+id/labelCharacterName"
+                android:drawableStart="@drawable/ic_start_message"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCharacterName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_border_16"
+                android:backgroundTint="@color/color_27FFFFFF"
+                android:gravity="center"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="12dp"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelCharacterName"
+                app:suffixText="0/50">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCharacterName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/lato_regular"
+                    android:hint="@string/name"
+                    android:maxLength="50"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/color_hint_edit_text"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/age_character"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilCharacterName" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ageChipsContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_border_16"
+                android:backgroundTint="@color/color_27FFFFFF"
+                android:gravity="center"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="12dp"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelAge"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ageEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/lato_regular"
+                    android:hint="@string/age"
+                    android:maxLength="50"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/color_hint_edit_text"
+                    android:inputType="number"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/gender_character"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ageChipsContainer" />
+
+            <LinearLayout
+                android:id="@+id/genderChipsContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelGender">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnMale"
+                    style="@style/Theme.AppCompat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_border_40_select"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="@string/male"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_FFFFFF"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:background="@drawable/bg_border_40_select"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="@string/female"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_FFFFFF"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNonBinary"
+                    style="@style/Theme.AppCompat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_border_40_select"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="@string/non_binary"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_FFFFFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/introduction"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/genderChipsContainer" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnRandomGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/lato_regular"
+                android:padding="8dp"
+                android:text="@string/random_ai"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/labelGreeting"
+                app:layout_constraintBottom_toBottomOf="@+id/labelGreeting"
+                android:visibility="gone"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilIntro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_border_16"
+                android:backgroundTint="@color/color_27FFFFFF"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="10dp"
+                app:counterMaxLength="2000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelGreeting"
+                app:hintEnabled="false"
+                app:suffixText="0/2000"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etIntro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:background="@null"
+                    android:hint="@string/e_g_long_blonde_hair_blue_eyes"
+                    android:maxLength="2000"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/color_hint_edit_text"
+                    app:layout_constraintBottom_toTopOf="@+id/countGetting"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0"
+                    android:textSize="14sp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelPersonality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/personality"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilIntro" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnPersonality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/lato_regular"
+                android:padding="8dp"
+                android:text="@string/random_ai"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/labelPersonality"
+                app:layout_constraintBottom_toBottomOf="@+id/labelPersonality"
+                android:visibility="gone"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPersonality"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_border_16"
+                android:backgroundTint="@color/color_27FFFFFF"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="10dp"
+                app:counterMaxLength="2000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelPersonality"
+                app:hintEnabled="false"
+                app:suffixText="0/2000"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPersonality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:background="@null"
+                    android:hint="@string/e_g_playful_flirty_sometimes_shy"
+                    android:maxLength="2000"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/color_hint_edit_text"
+                    app:layout_constraintBottom_toTopOf="@+id/countGetting"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0"
+                    android:textSize="14sp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelLanguageCharacteristics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/language_characteristics"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilPersonality" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnLanguageCharacteristics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/lato_regular"
+                android:padding="8dp"
+                android:text="@string/random_ai"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/labelLanguageCharacteristics"
+                app:layout_constraintBottom_toBottomOf="@+id/labelLanguageCharacteristics"
+                android:visibility="gone"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilLanguageCharacteristics"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_border_16"
+                android:backgroundTint="@color/color_27FFFFFF"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="10dp"
+                app:counterMaxLength="2000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelLanguageCharacteristics"
+                app:hintEnabled="false"
+                app:suffixText="0/2000"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLanguageCharacteristics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:background="@null"
+                    android:hint="@string/e_g_casual_uses_emojis_switches"
+                    android:maxLength="2000"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/color_hint_edit_text"
+                    app:layout_constraintBottom_toTopOf="@+id/countGetting"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0"
+                    android:textSize="14sp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelCharacterRelationship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/character_relationship"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilLanguageCharacteristics" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnCharacterRelationship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/lato_regular"
+                android:padding="8dp"
+                android:text="@string/random_ai"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/labelCharacterRelationship"
+                app:layout_constraintBottom_toBottomOf="@+id/labelCharacterRelationship"
+                android:visibility="gone"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCharacterRelationship"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_border_16"
+                android:backgroundTint="@color/color_27FFFFFF"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="10dp"
+                app:counterMaxLength="2000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelCharacterRelationship"
+                app:hintEnabled="false"
+                app:suffixText="0/2000"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCharacterRelationship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:background="@null"
+                    android:hint="@string/e_g_acts_like_best_friend_but_also_flirts_sometimes"
+                    android:maxLength="2000"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/color_hint_edit_text"
+                    app:layout_constraintBottom_toTopOf="@+id/countGetting"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0"
+                    android:textSize="14sp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/preview"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilCharacterRelationship" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/lato_regular"
+                android:padding="8dp"
+                android:text="@string/random_ai"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/labelPreview"
+                app:layout_constraintBottom_toBottomOf="@+id/labelPreview"
+                android:visibility="gone"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPreview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_border_16"
+                android:backgroundTint="@color/color_27FFFFFF"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="10dp"
+                app:counterMaxLength="2000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelPreview"
+                app:hintEnabled="false"
+                app:suffixText="0/2000"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:background="@null"
+                    android:hint="@string/e_g_first_impression_of_the_character_in_1_2_lines"
+                    android:maxLength="2000"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/color_hint_edit_text"
+                    app:layout_constraintBottom_toTopOf="@+id/countGetting"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0"
+                    android:textSize="14sp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/labelCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/category_character"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilPreview" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelCategory" />
+
+
+            <TextView
+                android:id="@+id/labelStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/tag"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvCategory" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvStyleTag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/labelStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/bg_btn_gardien_radius_12"
+        android:backgroundTint="@color/color_27FFFFFF"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="@string/text_continue"
+        android:textAllCaps="false"
+        android:textColor="@color/color_FFFFFF26"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="16dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,29 +1,53 @@
 package com.example.save_vehicle_2025_kotlin.main
 
-import android.os.Bundle
+import android.view.View
+import androidx.activity.viewModels
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import androidx.lifecycle.Lifecycle
+import androidx.navigation.fragment.NavHostFragment
+import com.bumptech.glide.Glide
 import com.example.baseapp.base.ui.BaseActivity
+import com.example.baseapp.base.ui.LoadingCallback
 import com.example.baseapp.base.ui.UiState
-import com.example.baseapp.main.MainViewModel
+import com.example.baseapp.base.utils.RxPreferences
+import com.example.baseapp.core.data.BaseResults
+import com.example.baseapp.core.data.LoginResponse
+import com.example.baseapp.core.di.GlobalNavigation
+import com.example.baseapp.main.navigation.BaseNavigation
+import com.example.featurehome.R
 import com.example.save_vehicle_2025_kotlin.databinding.MainActivityBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : BaseActivity<MainActivityBinding, MainViewModel>() {
+class MainActivity : BaseActivity<MainActivityBinding, MainViewModel>(), LoadingCallback {
 
     private lateinit var binding : MainActivityBinding
-    private lateinit var viewModel: MainViewModel
+
+    private val viewModel: MainViewModel by viewModels()
+
+
+    @Inject
+    lateinit var rxPreferences: RxPreferences
+
+    @Inject
+    @GlobalNavigation
+    lateinit var mainNav: BaseNavigation
+
     override fun getViewBinding(): MainActivityBinding {
         binding = MainActivityBinding.inflate(layoutInflater)
         return binding
     }
 
     override fun initView() {
-        // Call API khi init view
-        viewModel.getUserProfile()
+        viewModel.listenForTokenRefresh()
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(com.example.save_vehicle_2025_kotlin.R.id.nav_host) as NavHostFragment
+        val navController = navHostFragment.navController
+        mainNav.attach(navController)
+
     }
 
     override fun onResume() {
@@ -31,7 +55,6 @@ class MainActivity : BaseActivity<MainActivityBinding, MainViewModel>() {
     }
 
     override fun listenStateView() {
-        // Collect UI state từ ViewModel
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.uiStateCurrent.collect { state ->
@@ -52,48 +75,49 @@ class MainActivity : BaseActivity<MainActivityBinding, MainViewModel>() {
                             showError(state.message)
                         }
                         is UiState.Idle -> {
-                            // Initial state - do nothing
+
                         }
                     }
                 }
             }
         }
+
+        viewModel.isLoading.observe(this){ isLoading ->
+            if (isLoading) {
+                Glide.with(this)
+                    .load(R.drawable.loading_gif)
+                    .into(binding.loadingGif)
+                binding.loading.visibility = View.VISIBLE
+            }else{
+                binding.loading.visibility = View.INVISIBLE
+            }
+        }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+
+    override fun showLoading() {
+        viewModel.loading(true)
     }
 
-    private fun showLoading() {
-        // TODO: Implement loading UI
-        // Ví dụ: binding.progressBar.visibility = View.VISIBLE
-        // binding.loadingText.visibility = View.VISIBLE
+    override fun hideLoading() {
+        viewModel.loading(false)
     }
 
-    private fun hideLoading() {
-        // TODO: Hide loading UI
-        // Ví dụ: binding.progressBar.visibility = View.GONE
-        // binding.loadingText.visibility = View.GONE
-    }
+    private fun showContent(data: BaseResults<LoginResponse>) {
 
-    private fun showContent(data: com.example.baseapp.core.data.BaseResults<com.example.baseapp.core.data.LoginResponse>) {
-        // TODO: Implement success UI
-        // Ví dụ: binding.textView.text = data.data?.token ?: "No token"
-        // binding.userInfo.visibility = View.VISIBLE
     }
 
     private fun hideContent() {
-        // TODO: Hide content UI
-        // Ví dụ: binding.userInfo.visibility = View.GONE
+
     }
 
     private fun showError(message: String) {
-        // TODO: Implement error UI
-        // Ví dụ: binding.errorText.text = message
-        // binding.errorText.visibility = View.VISIBLE
+
     }
 
     private fun hideError() {
 
     }
+
+
 }

@@ -17,9 +17,15 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", '"http://192.168.5.236:9903"'
+            buildConfigField "String", "API_VERSION", '"/api/v1"'
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", '"https://gen-ai.amobear.com"'
+            buildConfigField "String", "API_VERSION", '"/api/v1"'
         }
     }
     compileOptions {
@@ -49,5 +55,32 @@ dependencies {
     implementation(libs.navigation.ui)
     implementation(libs.timber)
     implementation libs.lottie
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
     implementation project(":base")
+    implementation libs.wheelpicker
+    implementation libs.circleindicator
+    implementation libs.glide.v505
+    kapt libs.compiler.v505
+    implementation libs.flexbox
+
+    // Paging
+    implementation libs.paging.runtime
+    implementation libs.paging.common
+
+    // Login Google
+    implementation(libs.androidx.credentials)
+    implementation(libs.credentials.play.services.auth)
+    implementation(libs.googleid)
+
+    // Media3
+    implementation(libs.androidx.media3.ui)
+    implementation(libs.androidx.media3.exoplayer)
+
+    implementation libs.glide.transformations
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01"
+
+    // Groupie: https://github.com/lisawray/groupie
+    implementation(libs.groupie)
+    implementation(libs.groupie.viewbinding)
 }

@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bgContainer"
+        tools:background="@drawable/bg_onboarding"
+        android:scaleType="centerCrop"
+        />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginEnd="16dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ib_back_white"
+                app:layout_constraintBottom_toBottomOf="@+id/bgAvtToolBar"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bgAvtToolBar" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bgAvtToolBar"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_radius_1000_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvHeartCount"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/btnBack"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5"
+                android:layout_marginStart="8dp"
+                >
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgCharacterAvatar"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:layout_margin="6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:shapeAppearanceOverlay="@style/CircleImageView"
+                    android:scaleType="centerCrop"
+                    />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCharacterName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/lato_bold"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@id/imgCharacterAvatar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="Mira Nighti..." />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tvHeartCount"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_radius_1000_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnMenu"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                android:layout_marginVertical="8dp"
+                android:layout_marginEnd="8dp"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/imgHeart"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_level"
+                    />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvLeveChatBox"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imgHeart"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:fontFamily="@font/lato_regular"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:text="@string/_12"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="16dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@drawable/ic_more"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                android:layout_marginVertical="8dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listChatBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/actionButtonsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginBottom="26dp"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constrainedHeight="true"
+        />
+
+   <com.google.android.material.imageview.ShapeableImageView
+       app:layout_constraintBottom_toTopOf="@+id/actionButtonsContainer"
+       app:layout_constraintStart_toStartOf="@+id/actionButtonsContainer"
+       app:layout_constraintEnd_toEndOf="@+id/actionButtonsContainer"
+       app:layout_constraintTop_toBottomOf="@id/listChatBox"
+       app:layout_constraintVertical_bias="0"
+       app:layout_constraintHorizontal_bias="0"
+       android:layout_width="24dp"
+       android:layout_height="24dp"
+       app:shapeAppearanceOverlay="@style/CircleImageView"
+       android:scaleType="centerCrop"
+       android:layout_marginStart="16dp"
+       android:id="@+id/avtWaitingRep"
+       android:src="@drawable/bg_meet_ai_partner"
+       android:layout_marginBottom="12dp"
+       android:visibility="invisible"
+       />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/actionButtonsContainer"
+        app:layout_constraintStart_toEndOf="@+id/avtWaitingRep"
+        app:layout_constraintTop_toBottomOf="@id/listChatBox"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg_border_16"
+        android:backgroundTint="@color/color_CC000000"
+        android:layout_marginStart="8dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="12dp"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/typeWaiting"
+        android:visibility="invisible"
+        >
+        <com.prodigy.feature.girlfriend.ui.home.chat.boxChat.WaitingRepFromAiView
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/actionButtonsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintBottom_toTopOf="@id/messageInputContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/btnPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_radius_1000_black"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_weight="0.3"
+                android:src="@drawable/ic_photo"
+                android:scaleType="fitCenter"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:text="@string/photo"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnVideo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radius_1000_black"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:visibility="gone"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_video"
+                android:scaleType="centerCrop"
+                android:layout_weight="0.3"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:fontFamily="@font/lato_regular"
+                android:text="@string/video"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnCall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radius_1000_black"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:visibility="gone"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="0.3"
+                android:src="@drawable/ic_call"
+                android:scaleType="centerCrop"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:text="@string/call"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnGift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/bg_radius_1000_black"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:scaleType="fitCenter"
+                android:layout_weight="0.3"
+                android:src="@drawable/ic_gift"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:text="@string/gift"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginStart="8dp"
+                />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/messageInputContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="27dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        android:background="@color/color_CC000000"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/bgEditMessage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnSend"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/color_27FFFFFF"
+            android:background="@drawable/bg_border_24"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginTop="8dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnStar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_start_message"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                android:layout_marginStart="14dp"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/lato_regular"
+                android:hint="@string/message"
+                android:inputType="text"
+                android:maxLines="4"
+                android:paddingVertical="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_FFFFFF99"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/btnStar"
+                app:layout_constraintEnd_toStartOf="@+id/btnImageMessage"
+                app:layout_constraintStart_toEndOf="@id/btnStar"
+                app:layout_constraintTop_toTopOf="@id/btnStar"
+                android:maxHeight="200dp"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnImageMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/etMessage"
+                app:layout_constraintEnd_toStartOf="@id/btnMicMessage"
+                app:layout_constraintTop_toTopOf="@id/etMessage"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_galley_message"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnMicMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:src="@drawable/ic_mic_message"
+                app:layout_constraintBottom_toBottomOf="@id/etMessage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/etMessage"
+                android:visibility="gone"
+                tools:visibility="visible"
+                />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/etMessage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:id="@+id/imgUserChoose"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_boder_8"
+                app:shapeAppearanceOverlay="@style/Rounded8ImageView"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnClose"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_close"
+                app:layout_constraintEnd_toEndOf="@+id/imgUserChoose"
+                app:layout_constraintTop_toTopOf="@+id/imgUserChoose"
+                android:visibility="gone"
+                tools:visibility="visible"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bgEditMessage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bgEditMessage"
+
+            android:src="@drawable/ic_send_message"
+            />
+        
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toBottomOf="@id/bgEditMessage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="16dp"
+            android:id="@+id/messageSuggest"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,24 +2,26 @@ package com.example.baseapp.base.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.view.WindowCompat
 import androidx.viewbinding.ViewBinding
 
+abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatActivity()  {
 
-abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatActivity() {
-
-    private lateinit var viewBinding : VB
+    private lateinit var viewBinding: VB
     abstract fun getViewBinding(): VB
     abstract fun initView()
     abstract fun listenStateView()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewBinding = getViewBinding()
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.navigationBarColor = android.graphics.Color.TRANSPARENT
+        window.statusBarColor = android.graphics.Color.TRANSPARENT
         setContentView(viewBinding.root)
-
     }
-
     override fun onStart() {
         super.onStart()
         initView()
@@ -29,5 +31,4 @@ abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatAct
     override fun onPause() {
         super.onPause()
     }
-
 }

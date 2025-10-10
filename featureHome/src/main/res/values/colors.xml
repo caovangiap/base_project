@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="primary_color">#FF6200EE</color>
+    <color name="primary_dark">#FF3700B3</color>
+    <color name="accent_color">#FF03DAC5</color>
+    <color name="text_primary">#FF212121</color>
+    <color name="text_secondary">#FF757575</color>
+    <color name="background_light">#FFF5F5F5</color>
+    <color name="app_name_color">#FF3374</color>
+    <color name="indicatorColor_process">#FF3374</color>
+    <color name="trackColor_process">#4B2D37</color>
+    <color name="title_content_wellcome">#98FFFFFF</color>
+    <color name="color_skip">#9AFFFFFF</color>
+    <color name="color_hint_edit_text">#98FFFFFF</color>
+    <color name="color_indicator_unselect">#26FFFFFF</color>
+    <color name="color_indicator_select">#FF3374</color>
+    <color name="color_bottom_nav_select">#FF3374</color>
+    <color name="color_bottom_nav_unSelect">#8C8C8C</color>
+    <color name="color_transparent_00FFFFFF">#00FFFFFF</color>
+    <color name="color_9AFFFFFF">#9AFFFFFF</color>
+    <color name="color_66FFFFFF">#4DFFFFFF</color>
+    <color name="color_333333">#FF333333</color>
+    <color name="color_FF3374">#FF3374</color>
+    <color name="color_FF424E">#FF424E</color>
+    <color name="color_7FFFFFFF">#7FFFFFFF</color>
+    <color name="color_FFD5B6">#FFD5B6</color>
+
+</resources>

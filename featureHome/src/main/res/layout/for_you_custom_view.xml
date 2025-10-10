@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="20dp"
+    android:background="@color/color_transparent_00FFFFFF"
+    app:cardBackgroundColor="@color/color_transparent_00FFFFFF"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_transparent_00FFFFFF"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageItemCharacter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_meet_ai_partner"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bg_shadow_16"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/Rounded16ImageView"
+            />
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chatNow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_btn_gardien_radius_12"
+            android:fontFamily="@font/lato_bold"
+            android:paddingHorizontal="20dp"
+            android:text="@string/chat_now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1"
+            android:layout_marginHorizontal="48dp"
+            />
+
+        <TextView
+            android:id="@+id/introlCharacter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato_regular"
+            android:maxLines="2"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/chatNow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.997"
+            tools:text="She's your maid, but for some reason she hates you. She often humiliates and offends you. She always looks at you with disgust. Ever since you hired her a year ago, she's been bullying you. She is a horrible person, but at least she's a very competent maid.))
+It is nighttime. You are finally home after a long day of work. Meany looks disappointed.
+— I heard about the accident that happened at your job. I was sincerely hoping you were one of the victims, master..." />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/introlCharacter"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintVertical_bias="1"
+            android:layout_marginBottom="4dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            android:id="@+id/listTag"
+            tools:listitem="@layout/item_tag_for_you"
+            tools:itemCount="6"
+            />
+
+        <TextView
+            android:id="@+id/nameAndAgeCharacter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/listTag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintVertical_bias="1"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="4dp"
+            tools:text="Astra Nova, 25"
+            android:fontFamily="@font/lato_bold"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

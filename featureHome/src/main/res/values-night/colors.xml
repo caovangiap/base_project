@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FF000000</color>
+    <color name="black">#FFFFFFFF</color>
+    <color name="primary_color">#FFBB86FC</color>
+    <color name="primary_dark">#FF6200EE</color>
+    <color name="accent_color">#FF03DAC5</color>
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#FFFFFFFF</color>
+    <color name="background_light">#FF121212</color>
+    <color name="app_name_color">#FF3374</color>
+    <color name="indicatorColor_process">#FF3374</color>
+    <color name="trackColor_process">#4B2D37</color>
+</resources>

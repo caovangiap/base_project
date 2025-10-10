@@ -3,22 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_nav_graph"
-    app:startDestination="@id/firstFragment">
-
+    app:startDestination="@id/forYouFragment">
 
     <fragment
-        android:id="@+id/firstFragment"
-        android:name="com.example.featurehome.FirstFragment"
-        android:label="fragment_first"
-        tools:layout="@layout/fragment_first" >
-        <action
-            android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
+        android:id="@+id/forYouFragment"
+        android:name="com.prodigy.feature.girlfriend.ui.home.foryou.ForYouFragment"
+        android:label="For You"
+        tools:layout="@layout/foryou_fragment">
+
     </fragment>
 
     <fragment
-        android:id="@+id/secondFragment"
-        android:name="com.example.featurehome.SecondFragment"
-        android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        android:id="@+id/discoverFragment"
+        android:name="com.prodigy.feature.girlfriend.ui.home.discover.DiscoverFragment"
+        android:label="Discover"
+        tools:layout="@layout/discover_fragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.prodigy.feature.girlfriend.ui.home.chat.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/chat_fragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/myCharacterFragment"
+        android:name="com.prodigy.feature.girlfriend.ui.home.mycharacter.MyCharacterFragment"
+        android:label="My Character"
+        tools:layout="@layout/mycharacter_fragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchChildFragment"
+        android:name="com.prodigy.feature.girlfriend.ui.home.discover.search_child.SearchChildFragment"
+        android:label="SearchChildFragment"
+        tools:layout="@layout/search_child_fragment"
+        />
 </navigation>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="createcharacter">createCharacter</string>
+    <string name="delete_message">Delete message</string>
+    <string name="pin_to_top">Pin to top</string>
+    <string name="violent_content">Violent content</string>
+    <string name="religion_political_sensitivity">Religion, political sensitivity</string>
+    <string name="sexual_or_adult_content">Sexual or adult content</string>
+    <string name="harassment_or_bullying">Harassment or bullying</string>
+    <string name="hate_speech_or_discrimination">Hate speech or discrimination</string>
+    <string name="spam_or_misleading_content">Spam or misleading content</string>
+    <string name="self_harm_or_suicide_promotion">Self-harm or suicide promotion</string>
+    <string name="scam_or_fraud">Scam or fraud</string>
+    <string name="other">Other</string>
+    <string name="reporting_will_block_the_character_and_delete_your_chat_history_with_it">Reporting will block the character and delete your chat history with it.</string>
+    <string name="submit">Submit</string>
+    <string name="report_character">Report character</string>
+    <string name="send_gift">Send gift</string>
+    <string name="level_1">Level 1</string>
+    <string name="intimacy_point">Intimacy Point:</string>
+    <string name="_70">70</string>
+    <string name="daily_challenge">Daily Challenge</string>
+    <string name="daily_challenge_heat">Daily Challenge 💕</string>
+    <string name="send_2_messages">Send 2 messages</string>
+    <string name="_1_2_complete">1/2 Complete</string>
+    <string name="_50">+50</string>
+    <string name="watch_ads">Watch Ads</string>
+    <string name="_2_10_complete">2/10 Complete</string>
+    <string name="turn_on_notifications">Turn on notifications</string>
+    <string name="_12">12</string>
+    <string name="edit">Edit</string>
+    <string name="share">Share</string>
+    <string name="_1">1</string>
+    <string name="lvl_1">Lvl.1</string>
+    <string name="_100">100</string>
+    <string name="delete_character">Delete character</string>
+    <string name="edit_character">Edit Character</string>
+</resources>

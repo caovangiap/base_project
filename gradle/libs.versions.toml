@@ -1,15 +1,20 @@
 [versions]
-agp = "8.5.2"
-kotlin = "2.0.0"
+agp = "8.6.0"
+glideTransformations = "4.3.0"
+kotlin = "2.2.20"
+circleindicator = "2.1.6"
+compiler = "5.0.5"
+flexbox = "3.0.0"
+glideVersion = "5.0.5"
 coreKtx = "1.13.1"
 appcompat = "1.7.1"
-material = "1.12.0"
+material = "1.13.0"
 lottie = "6.0.0"
-hilt = "2.51.1"
+hilt = "2.57.1"
 retrofit = "2.11.0"
 gsonConverter = "2.11.0"
 okhttp = "4.12.0"
-room = "2.6.1"
+room = "2.8.0"
 navigation = "2.7.7"
 lifecycle = "2.8.6"
 fragmentKtx = "1.8.4"
@@ -27,9 +32,55 @@ legacySupportV4 = "1.0.0"
 annotation = "1.6.0"
 viewbindingVersion = "8.12.1"
 
+gson = "2.11.0"
+paging = "3.3.2"
+glide = "4.16.0"
+wheelpicker = "0.4.0"
+
+preference = "1.2.1"
+multidex = "2.0.1"
+firebase-bom = "34.3.0"
+rxjava = "3.1.11"
+rxandroid = "3.0.2"
+afAndroidSdk = "6.17.1"
+installreferrer = "2.2"
+homereferrer = "1.0.0.6"
+adrevenue = "6.9.0"
+purchaseConnector = "2.0.1"
+billing = "7.0.0"
+qonversion = "8.1.0"
+lifecycleExtensions = "2.2.0"
+volley = "1.2.1"
+okhttp-bom = "5.1.0"
+playServicesAds = "23.5.0"
+playServicesAdsIdentifier = "18.1.0"
+playServicesAppset = "16.1.0"
+playServicesBasement = "18.4.0"
+userMessagingPlatform = "3.0.0"
+facebook = "6.20.0.0"
+facebookAndroidSdk = "18.1.3"
+facebookAudienceSdk = "6.20.0"
+pangle = "6.4.0.2.0"
+pangleGlobalAdsSdk = "6.4.0.2"
+ksp = "2.2.20-2.0.3"
+activity = "1.10.1"
+hiltAndroid = "1.3.0"
+hawk = "2.0.1"
+groupie = "2.10.1"
+media3 = "1.8.0"
+credentials = "1.3.0"
+googleid = "1.1.1"
+sandwich = "2.1.3"
+databindingCommon = "8.13.0"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+circleindicator = { module = "me.relex:circleindicator", version.ref = "circleindicator" }
+compiler-v505 = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
+flexbox = { module = "com.google.android.flexbox:flexbox", version.ref = "flexbox" }
+glide-transformations = { module = "jp.wasabeef:glide-transformations", version.ref = "glideTransformations" }
+glide-v505 = { module = "com.github.bumptech.glide:glide", version.ref = "glideVersion" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
@@ -46,6 +97,7 @@ navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", 
 navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
 lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
+lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "lifecycle" }
 fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtx" }
 activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
@@ -61,6 +113,66 @@ coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-androi
 androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
 androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 androidx-viewbinding = { group = "androidx.databinding", name = "viewbinding", version.ref = "viewbindingVersion" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+paging-runtime = { module = "androidx.paging:paging-runtime-ktx", version.ref = "paging" }
+paging-common = { module = "androidx.paging:paging-common-ktx", version.ref = "paging" }
+paging-rxjava3 = { module = "androidx.paging:paging-rxjava3", version.ref = "paging" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+wheelpicker = { module = "sh.tyy:wheelpicker", version.ref = "wheelpicker" }
+
+#DucNT
+androidx-preference = { module = "androidx.preference:preference", version.ref = "preference" }
+androidx-multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+firebase-perf = { group = "com.google.firebase", name = "firebase-perf" }
+firebase-config = { group = "com.google.firebase", name = "firebase-config" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging" }
+rxandroid = { module = "io.reactivex.rxjava3:rxandroid", version.ref = "rxandroid" }
+rxjava = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxjava" }
+af-android-sdk = { module = "com.appsflyer:af-android-sdk", version.ref = "afAndroidSdk" }
+installreferrer = { module = "com.android.installreferrer:installreferrer", version.ref = "installreferrer" }
+homereferrer = { module = "com.miui.referrer:homereferrer", version.ref = "homereferrer" }
+adrevenue = { module = "com.appsflyer:adrevenue", version.ref = "adrevenue" }
+purchase-connector = { module = "com.appsflyer:purchase-connector", version.ref = "purchaseConnector" }
+billing-ktx = { module = "com.android.billingclient:billing-ktx", version.ref = "billing" }
+qonversion-android = { module = "io.qonversion.android.sdk:sdk", version.ref = "qonversion" }
+androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime", version.ref = "lifecycle" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", version.ref = "lifecycle" }
+androidx-lifecycle-extensions = { module = "androidx.lifecycle:lifecycle-extensions", version.ref = "lifecycleExtensions" }
+volley = { module = "com.android.volley:volley", version.ref = "volley" }
+okhttp-bom = { module = "com.squareup.okhttp3:okhttp-bom", version.ref = "okhttp-bom" }
+okhttp3-okhttp = { group = "com.squareup.okhttp3", name = "okhttp" }
+okhttp3-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor" }
+play-services-ads = { module = "com.google.android.gms:play-services-ads", version.ref = "playServicesAds" }
+play-services-ads-identifier = { module = "com.google.android.gms:play-services-ads-identifier", version.ref = "playServicesAdsIdentifier" }
+play-services-appset = { module = "com.google.android.gms:play-services-appset", version.ref = "playServicesAppset" }
+play-services-basement = { module = "com.google.android.gms:play-services-basement", version.ref = "playServicesBasement" }
+user-messaging-platform = { module = "com.google.android.ump:user-messaging-platform", version.ref = "userMessagingPlatform" }
+mediation-facebook = { module = "com.google.ads.mediation:facebook", version.ref = "facebook" }
+mediation-pangle = { module = "com.google.ads.mediation:pangle", version.ref = "pangle" }
+facebook-android-sdk = { module = "com.facebook.android:facebook-android-sdk", version.ref = "facebookAndroidSdk" }
+facebook-audience-sdk = { module = "com.facebook.android:audience-network-sdk", version.ref = "facebookAudienceSdk" }
+pangle-global-ads-sdk = { module = "com.pangle.global:ads-sdk", version.ref = "pangleGlobalAdsSdk" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+androidx-hilt-navigation-fragment = { module = "androidx.hilt:hilt-navigation-fragment", version.ref = "hiltAndroid" }
+androidx-hilt-work = { module = "androidx.hilt:hilt-work", version.ref = "hiltAndroid" }
+androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hiltAndroid" }
+hawk = { module = "com.orhanobut:hawk", version.ref = "hawk" }
+groupie = { module = "com.github.lisawray.groupie:groupie", version.ref = "groupie" }
+groupie-viewbinding = { module = "com.github.lisawray.groupie:groupie-viewbinding", version.ref = "groupie" }
+androidx-media3-ui = { module = "androidx.media3:media3-ui", version.ref = "media3" }
+androidx-media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "media3" }
+androidx-credentials = { module = "androidx.credentials:credentials", version.ref = "credentials" }
+credentials-play-services-auth = { module = "androidx.credentials:credentials-play-services-auth", version.ref = "credentials" }
+googleid = { module = "com.google.android.libraries.identity.googleid:googleid", version.ref = "googleid" }
+sandwich = { module = "com.github.skydoves:sandwich", version.ref = "sandwich" }
+sandwich-retrofit = { module = "com.github.skydoves:sandwich-retrofit", version.ref = "sandwich" }
+androidx-databinding-common = { group = "androidx.databinding", name = "databinding-common", version.ref = "databindingCommon" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -68,3 +180,4 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

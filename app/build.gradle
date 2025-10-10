@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.kotlin.kapt)
-
 }
 
 android {
@@ -39,6 +38,7 @@ android {
     buildFeatures {
         buildConfig = true
         viewBinding true
+        buildConfig true
     }
 }
 
@@ -46,6 +46,8 @@ dependencies {
 
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat
+    implementation libs.activity.ktx
+    implementation libs.fragment.ktx
     implementation libs.material
     implementation libs.androidx.legacy.support.v4
     implementation libs.recyclerview
@@ -64,6 +66,10 @@ dependencies {
     implementation libs.lottie
     implementation libs.coroutines.core
     implementation libs.coroutines.android
+    implementation libs.glide
+    kapt libs.glide.compiler
+    implementation(libs.androidx.multidex)
+    implementation libs.paging.runtime
 
     implementation project(":base")
     implementation project(":featureHome")

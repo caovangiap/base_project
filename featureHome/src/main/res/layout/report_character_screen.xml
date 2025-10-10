@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_onboarding"
+    android:theme="@style/Theme.AppCompat"
+    >
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp"
+                android:background="@drawable/ib_back_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <TextView
+                android:id="@+id/titleToolBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/report_character"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioViolentContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/violent_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:paddingVertical="12dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button_selector"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radioReligionPolitical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/religion_political_sensitivity"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:paddingVertical="12dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button_selector"
+                    android:checked="true"
+                    />
+
+
+                <RadioButton
+                    android:id="@+id/radioSexualAdult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sexual_or_adult_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:paddingVertical="12dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button_selector"
+                    android:layout_marginBottom="8dp" />
+
+
+                <RadioButton
+                    android:id="@+id/radioHarassment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/harassment_or_bullying"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:paddingVertical="12dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button_selector"
+                    android:layout_marginBottom="8dp" />
+
+
+                <RadioButton
+                    android:id="@+id/radioHateSpeech"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hate_speech_or_discrimination"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:paddingVertical="12dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button_selector"
+                    android:layout_marginBottom="8dp" />
+
+
+                <RadioButton
+                    android:id="@+id/radioSpam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/spam_or_misleading_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:paddingVertical="12dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button_selector"
+                    android:layout_marginBottom="8dp" />
+
+
+                <RadioButton
+                    android:id="@+id/radioSelfHarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/self_harm_or_suicide_promotion"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:paddingVertical="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button_selector"
+                    />
+
+
+                <RadioButton
+                    android:id="@+id/radioScam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scam_or_fraud"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:paddingVertical="12dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button_selector"
+                    android:layout_marginBottom="8dp" />
+
+
+                <RadioButton
+                    android:id="@+id/radioOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:paddingVertical="12dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button_selector"
+                    android:layout_marginBottom="8dp" />
+
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"
+                android:padding="8dp">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_notification_message"
+                    android:backgroundTint="#8C8C8C"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/reporting_will_block_the_character_and_delete_your_chat_history_with_it"
+                    android:textColor="#8C8C8C"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="16sp"
+        android:background="@drawable/bg_btn_gardien_radius_12"
+        android:paddingVertical="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="16dp"
+        android:textAllCaps="false"
+        />
+
+</LinearLayout>

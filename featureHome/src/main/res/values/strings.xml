@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ai_girlfriend">AI Girlfriend</string>
+    <string name="welcome_title">Meet Your Ai Girl Friend</string>
+    <string name="welcome_subtitle">Chat, connect, and enjoy moments with \n your AI character</string>
+    <string name="get_started">Get Started</string>
+    <string name="skip">Skip</string>
+    <string name="text_continue">Continue</string>
+    
+    <!-- Get Name -->
+    <string name="what_is_your_name">What is your name?</string>
+    <string name="enter_your_name">Enter your name</string>
+    
+    <!-- Get Age -->
+    <string name="what_is_your_age">What is your age?</string>
+    <string name="enter_your_age">Enter your age</string>
+    
+    <!-- Get Gender -->
+    <string name="what_is_your_gender">What is your gender?</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    
+    <!-- Get Interact -->
+    <string name="how_do_you_want_to_interact">How do you want to interact?</string>
+    <string name="chat">Chat</string>
+    <string name="voice_call">Voice Call</string>
+    <string name="video_call">Video Call</string>
+
+    <string name="delete_chat_content">This action is irreversible, please consider before choosing.</string>
+
+    <string name="delete">Delete</string>
+    <!-- Get Relationship -->
+    <string name="what_relationship_do_you_want">What relationship do you want?</string>
+    <string name="friend">Friend</string>
+    <string name="girlfriend">Girlfriend</string>
+    <string name="wife">Wife</string>
+    <string name="how_old_are_you">How old are you?</string>
+    <string name="meet_your_ai_partner">Meet Your AI Partner</string>
+    <string name="important_for_in_app_content_recommendations">Important for in-app content recommendations</string>
+    
+    <!-- Onboarding strings -->
+    <string name="onboarding_subtitle_1">Whether girlfriend or boyfriend, someone is always here for you</string>
+    <string name="onboarding_title_2">A Love That Listens</string>
+    <string name="onboarding_subtitle_2">Share your thoughts and feelings freely, and feel truly understood</string>
+    <string name="onboarding_title_3">Your Story, Your Way</string>
+    <string name="onboarding_subtitle_3">Shape the bond, explore romance, and write your own love story</string>
+    <string name="home">Home</string>
+    <string name="discover">Discover</string>
+    <string name="message">Message</string>
+    <string name="character">Character</string>
+    <string name="chat_now">Chat now</string>
+    <string name="for_you">For you</string>
+    <string name="filter">Filter</string>
+    <string name="gender">Gender</string>
+    <string name="non_binary">Non-binary</string>
+    <string name="age">Age</string>
+    <string name="_18"><![CDATA[<18]]></string>
+    <string name="_18_25">18-25</string>
+    <string name="_25_35">25-35</string>
+    <string name="_35"><![CDATA[>35]]></string>
+    <string name="style">Style</string>
+    <string name="reset">Reset</string>
+    <string name="apply">Apply</string>
+    <string name="tv_continue">Continue</string>
+    <string name="suggestion">Suggestion</string>
+    <string name="search_by_character_name_style">Search by character name, style</string>
+    <string name="no_chats_yet">No chats... yet</string>
+    <string name="find_or_create_new_ai_characters_to_chat_with">Find or create new AI characters to chat with</string>
+    <string name="see_suggestions">See suggestions</string>
+    <string name="photo">Photo</string>
+    <string name="video">Video</string>
+    <string name="call">Call</string>
+    <string name="gift">Gift</string>
+    <string name="my_character">My character</string>
+    <string name="no_characters">No characters</string>
+    <string name="create_new">Create new</string>
+    <string name="create_character">Create character</string>
+    <string name="character_photo">Character photo*</string>
+    <string name="character_name">Character name*</string>
+    <string name="random_ai">Random AI</string>
+    <string name="name">Name</string>
+    <string name="age_character">Age*</string>
+    <string name="gender_character">Gender*</string>
+    <string name="greeting">Greeting</string>
+    <string name="e_g_long_blonde_hair_blue_eyes">e.g long blonde hair, blue eyes</string>
+    <string name="style_character">Style*</string>
+    <string name="introduction">Introduction</string>
+    <string name="e_g_playful_flirty_sometimes_shy">e.g. Playful, flirty, sometimes shy</string>
+    <string name="e_g_casual_uses_emojis_switches_between_sweet_teasing"><![CDATA[e.g. Casual, uses emojis, switches between sweet & teasing]]></string>
+    <string name="personality">Personality</string>
+    <string name="language_characteristics">Language Characteristics</string>
+    <string name="e_g_casual_uses_emojis_switches"><![CDATA[e.g. Casual, uses emojis, switches between sweet & teasing]]></string>
+    <string name="character_relationship">Character Relationship</string>
+    <string name="e_g_acts_like_best_friend_but_also_flirts_sometimes">e.g. Acts like best friend but also flirts sometimes</string>
+    <string name="preview">Preview</string>
+    <string name="e_g_first_impression_of_the_character_in_1_2_lines">e.g. First impression of the character in 1–2 lines</string>
+    <string name="category_character">Category*</string>
+    <string name="tag">Tag* (0/5)</string>
+
+    <!-- Chat menu items -->
+    <string name="unpin_chat">Unpin chat</string>
+    <string name="delete_chat">Delete chat</string>
+
+    <!-- Login -->
+    <string name="txt_welcome_to_app_name">Welcome to %s</string>
+    <string name="txt_login_google">Continue with Google</string>
+    <string name="txt_login_guest_mode">Login (Guest mode)</string>
+    <string name="txt_confirm_18_years_old">I confirm that I am 18 years old.</string>
+    <string name="txt_full_policy_login">By signing up, you confirm that you have read and understood Term of Service and Privacy Policy.</string>
+    <string name="txt_sub_policy_login_term_of_service">Term of Service</string>
+    <string name="txt_sub_policy_login_privacy_policy">Privacy Policy</string>
+    <string name="toast_confirm_18_years_old">Please confirm 18 years old</string>
+    <string name="toast_error_login_google">Something went wrong. Please try again</string>
+    <string name="createcharacter">createCharacter</string>
+    <string name="txt_premium">Premium</string>
+    <string name="txt_profile">Profile</string>
+    <string name="txt_my_wallet">My wallet</string>
+    <string name="txt_get_more_coin">Get more coin</string>
+    <string name="delete_message">Delete message</string>
+    <string name="pin_to_top">Pin to top</string>
+    <string name="violent_content">Violent content</string>
+    <string name="religion_political_sensitivity">Religion, political sensitivity</string>
+    <string name="sexual_or_adult_content">Sexual or adult content</string>
+    <string name="harassment_or_bullying">Harassment or bullying</string>
+    <string name="hate_speech_or_discrimination">Hate speech or discrimination</string>
+    <string name="spam_or_misleading_content">Spam or misleading content</string>
+    <string name="self_harm_or_suicide_promotion">Self-harm or suicide promotion</string>
+    <string name="scam_or_fraud">Scam or fraud</string>
+    <string name="other">Other</string>
+    <string name="reporting_will_block_the_character_and_delete_your_chat_history_with_it">Reporting will block the character and delete your chat history with it.</string>
+    <string name="submit">Submit</string>
+    <string name="report_character">Report character</string>
+    <string name="send_gift">Send gift</string>
+    <string name="level_1">Level 1</string>
+    <string name="intimacy_point">Intimacy Point:</string>
+    <string name="_70">70</string>
+    <string name="daily_challenge">Daily Challenge</string>
+    <string name="daily_challenge_heat">Daily Challenge 💕</string>
+    <string name="send_2_messages">Send 2 messages</string>
+    <string name="_1_2_complete">1/2 Complete</string>
+    <string name="_50">+50</string>
+    <string name="watch_ads">Watch Ads</string>
+    <string name="_2_10_complete">2/10 Complete</string>
+    <string name="turn_on_notifications">Turn on notifications</string>
+    <string name="_12">12</string>
+    <string name="edit">Edit</string>
+    <string name="share">Share</string>
+    <string name="_1">1</string>
+    <string name="lvl_1">Lvl.1</string>
+    <string name="_100">100</string>
+    <string name="txt_description_splash">Discover Your AI Girlfriend</string>
+    <string name="delete_character">Delete character</string>
+    <string name="hint_edt_chat">Message</string>
+    <string name="toast_chat_message_empty">Please enter your message</string>
+    <string name="toast_error_unknown">Something went wrong. Please try again.</string>
+    <string name="edit_character">Edit Character</string>
+</resources>
