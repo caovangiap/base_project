@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:theme="@style/Theme.Material3.Light.NoActionBar"
     android:id="@+id/container"
+    android:background="@color/white_00FFFFFF"
     >
 
     <androidx.fragment.app.FragmentContainerView
@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        app:navGraph="@navigation/main_nav_graph"
-        app:defaultNavHost="true"/>
+        app:navGraph="@navigation/girl_friend_nav_graph"
+       />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

@@ -1,5 +1,6 @@
 package com.example.save_vehicle_2025_kotlin.main
 
+import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.Lifecycle
@@ -19,6 +20,7 @@ import com.example.featurehome.R
 import com.example.save_vehicle_2025_kotlin.databinding.MainActivityBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -36,6 +38,10 @@ class MainActivity : BaseActivity<MainActivityBinding, MainViewModel>(), Loading
     @GlobalNavigation
     lateinit var mainNav: BaseNavigation
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+
     override fun getViewBinding(): MainActivityBinding {
         binding = MainActivityBinding.inflate(layoutInflater)
         return binding
@@ -47,7 +53,6 @@ class MainActivity : BaseActivity<MainActivityBinding, MainViewModel>(), Loading
             .findFragmentById(com.example.save_vehicle_2025_kotlin.R.id.nav_host) as NavHostFragment
         val navController = navHostFragment.navController
         mainNav.attach(navController)
-
     }
 
     override fun onResume() {
@@ -93,7 +98,6 @@ class MainActivity : BaseActivity<MainActivityBinding, MainViewModel>(), Loading
             }
         }
     }
-
 
     override fun showLoading() {
         viewModel.loading(true)

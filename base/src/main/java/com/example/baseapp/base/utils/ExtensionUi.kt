@@ -10,6 +10,7 @@ import android.provider.OpenableColumns
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.ColorInt
@@ -22,6 +23,7 @@ import androidx.fragment.app.Fragment
 import com.example.baseapp.R
 import com.example.baseapp.base.ui.BaseBottomDialog
 import com.example.baseapp.base.ui.TypeDialog
+import timber.log.Timber
 import java.text.BreakIterator
 
 
@@ -78,8 +80,8 @@ fun BaseBottomDialog.setUpShowDoubleButton(
     @StringRes title: Int,
     @StringRes content: Int,
     @StringRes buttonText: Int,
-    deleteChat: ()-> Unit
-): BaseBottomDialog{
+    deleteChat: () -> Unit
+): BaseBottomDialog {
     val dialog = BaseBottomDialog.newInstance(
         imageRes, title, content, buttonText
     )
@@ -90,36 +92,38 @@ fun BaseBottomDialog.setUpShowDoubleButton(
 
 fun BaseBottomDialog.showDialogType(
     typeDialog: TypeDialog,
-    clickButton : ()-> Unit,
-    @StringRes notification : Int? = null
-): BaseBottomDialog{
+    clickButton: () -> Unit,
+    @StringRes notification: Int? = null
+): BaseBottomDialog {
 
-    return when(typeDialog){
-        TypeDialog.DialogNotConnectInterNet ->{
+    return when (typeDialog) {
+        TypeDialog.DialogNotConnectInterNet -> {
             setupDialogToShow(
                 R.drawable.ic_no_internet,
                 R.string.no_internet,
                 R.string.please_check_your_network_connection_and_try_again,
                 R.string.retry_cap,
-                {clickButton()}
+                { clickButton() }
             )
         }
+
         TypeDialog.DialogSaveError -> {
             setupDialogToShow(
                 R.drawable.ic_sever_icon,
                 R.string.save_error,
                 R.string.unable_to_connect_to_server_please_try_again,
                 R.string.retry_cap,
-                {clickButton()}
+                { clickButton() }
             )
         }
-        TypeDialog.DialogAllowNotification ->{
+
+        TypeDialog.DialogAllowNotification -> {
             setupDialogToShow(
                 R.drawable.ic_notification,
                 R.string.allow_notifications,
-                notification?:R.string.no_internet,
+                notification ?: R.string.no_internet,
                 R.string.retry_cap,
-                {clickButton()}
+                { clickButton() }
             )
         }
     }
@@ -174,12 +178,33 @@ fun Activity.isGestureNavigation(): Boolean {
 
     val insets = ViewCompat.getRootWindowInsets(window.decorView) ?: return false
     val navVisible = insets.isVisible(WindowInsetsCompat.Type.navigationBars())
-    val navIgnore = insets.getInsetsIgnoringVisibility(WindowInsetsCompat.Type.navigationBars()).bottom
+    val navIgnore =
+        insets.getInsetsIgnoringVisibility(WindowInsetsCompat.Type.navigationBars()).bottom
     val nav = insets.getInsets(WindowInsetsCompat.Type.navigationBars()).bottom
     val gestures = insets.getInsets(WindowInsetsCompat.Type.systemGestures()).bottom
     if (navIgnore == 0 && gestures > 0) return true
 
     val threshold = (16 * resources.displayMetrics.density).toInt()
     return !navVisible && (gestures - nav) >= threshold
+}
+
+fun Activity.paddingStatusBar(rootView: View) {
+    ViewCompat.setOnApplyWindowInsetsListener(rootView) { v, insets ->
+        val sysBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+        v.setPadding(v.paddingLeft, sysBars.top, v.paddingRight, sysBars.bottom)
+        insets
+
+        val cutout = insets.displayCutout
+        val nav = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
+        val gesture = insets.getInsets(WindowInsetsCompat.Type.systemGestures())
+        val ime = insets.getInsets(WindowInsetsCompat.Type.ime())
+
+        Timber.tag("paddingStatusBar")
+            .d("✅ Tai thỏ: ${cutout != null && cutout.boundingRects.isNotEmpty()}✅ Navigation bar (3 phím): ${nav.bottom > 0}✅ Gesture navigation: ${gesture.left > 0 || gesture.right > 0}✅ Bàn phím ảo bật: ${ime.bottom > 0} ")
+
+        insets
+    }
+
+
 }
 

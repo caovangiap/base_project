@@ -31,6 +31,7 @@ coroutines = "1.7.1"
 legacySupportV4 = "1.0.0"
 annotation = "1.6.0"
 viewbindingVersion = "8.12.1"
+firebaseFirestoreKtx = "26.0.0"
 
 gson = "2.11.0"
 paging = "3.3.2"
@@ -173,6 +174,7 @@ googleid = { module = "com.google.android.libraries.identity.googleid:googleid",
 sandwich = { module = "com.github.skydoves:sandwich", version.ref = "sandwich" }
 sandwich-retrofit = { module = "com.github.skydoves:sandwich-retrofit", version.ref = "sandwich" }
 androidx-databinding-common = { group = "androidx.databinding", name = "databinding-common", version.ref = "databindingCommon" }
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

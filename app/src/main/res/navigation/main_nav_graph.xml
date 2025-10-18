@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/home_nav_graph"
-        app:graph="@navigation/home_nav_graph"
+        app:graph="@navigation/girl_friend_nav_graph"
         />
 
 

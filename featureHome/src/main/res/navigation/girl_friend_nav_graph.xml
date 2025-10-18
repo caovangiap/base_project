@@ -8,7 +8,9 @@
     <fragment
         android:id="@+id/splashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/splash_fragment">
+        tools:layout="@layout/splash_fragment"
+        android:name="com.example.featurehome.FirstFragment"
+        >
         <action
             android:id="@+id/action_splashFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment"
@@ -32,7 +34,9 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:label="fragment_welcome"
-        tools:layout="@layout/welcome_fragment">
+        tools:layout="@layout/welcome_fragment"
+        android:name="com.example.featurehome.SecondFragment"
+        >
         <action
             android:id="@+id/action_welcomeFragment_to_onboardingFragment"
             app:destination="@id/onboardingFragment"
