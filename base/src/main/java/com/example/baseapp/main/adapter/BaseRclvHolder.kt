@@ -16,7 +16,7 @@ open class BaseRclvHolder<VB : ViewBinding, DATA>(itemView: View) :
     }
 
     /**
-     * mục tiêu của hàm này là
+     *      mục tiêu của hàm này là
      *      đang tạo ra 1 trừu tượng viewbinding
      *      nhưng chỉ cần mỗi khi sử dụng truyền vào itemview là tự có viewBinding chính xác dùng quá biến viewBinding trong class này
       */
