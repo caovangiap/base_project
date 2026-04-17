@@ -22,7 +22,6 @@ class MainActivity : BaseActivity<MainActivityBinding, MainViewModel>() {
     }
 
     override fun initView() {
-        // Call API khi init view
         viewModel.getUserProfile()
     }
 
