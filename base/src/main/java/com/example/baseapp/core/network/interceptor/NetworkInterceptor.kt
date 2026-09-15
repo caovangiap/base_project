@@ -6,6 +6,7 @@ import androidx.annotation.RequiresExtension
 import com.example.baseapp.core.network.ApiException
 import com.example.baseapp.base.utils.isNetworkConnected
 import com.google.gson.Gson
+import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.Interceptor
 import okhttp3.Response
 import okio.IOException
@@ -17,6 +18,7 @@ import javax.inject.Inject
  * bước can thiệp mọi request/response trước – sau khi Retrofit đã tạo URL và chuẩn bị gửi đi.
  */
 class NetworkInterceptor @Inject constructor(
+    @ApplicationContext
     private val context: Context,
     private val gson: Gson,
     ) : Interceptor {
