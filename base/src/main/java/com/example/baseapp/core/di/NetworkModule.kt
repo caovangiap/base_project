@@ -4,6 +4,8 @@ import com.example.baseapp.core.data.remote.UserApiService
 import com.example.baseapp.core.network.RetrofitFactory
 import com.example.baseapp.core.network.interceptor.NetworkInterceptor
 import com.example.baseapp.base.utils.ConstantValue
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -41,4 +43,11 @@ object NetworkModule {
     @Provides @Singleton
     fun provideUserApiService(retrofit: Retrofit): UserApiService =
         retrofit.create(UserApiService::class.java)
+
+    @Provides
+    @Singleton
+    fun provideGson(): Gson {
+        return GsonBuilder()
+            .create()
+    }
 }
