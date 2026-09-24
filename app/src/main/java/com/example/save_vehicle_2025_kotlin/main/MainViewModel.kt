@@ -1,13 +1,12 @@
-package com.example.baseapp.main
+package com.example.save_vehicle_2025_kotlin.main
 
 import androidx.lifecycle.viewModelScope
 import com.example.baseapp.base.ui.BaseViewModel
 import com.example.baseapp.base.ui.UiState
-import com.example.baseapp.base.ui.UiState.*
+import com.example.baseapp.core.data.ApiResult
 import com.example.baseapp.core.data.BaseResults
 import com.example.baseapp.core.data.LoginResponse
 import com.example.baseapp.core.data.repository.UserRepository
-import com.example.baseapp.core.data.ApiResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -27,8 +26,8 @@ class MainViewModel @Inject constructor(
     fun getUserProfile() {
         viewModelScope.launch {
             userRepository.getUserProfile()
-                .catch { e -> 
-                    _uiState.value = Error(e.message ?: "Unknown error")
+                .catch { e ->
+                    _uiState.value = UiState.Error(e.message ?: "Unknown error")
                 }
                 .collect { result ->
                     when (result) {
@@ -36,10 +35,10 @@ class MainViewModel @Inject constructor(
                             _uiState.value = UiState.Loading
                         }
                         is ApiResult.Success -> {
-                            _uiState.value = Success(result.data)
+                            _uiState.value = UiState.Success(result.data)
                         }
                         is ApiResult.Error -> {
-                            _uiState.value = Error(result.message)
+                            _uiState.value = UiState.Error(result.message)
                         }
 
                     }

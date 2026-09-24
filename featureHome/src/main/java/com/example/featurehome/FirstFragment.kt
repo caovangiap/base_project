@@ -3,7 +3,6 @@ package com.example.featurehome
 import android.os.Bundle
 import android.view.View
 import com.airbnb.lottie.LottieDrawable
-import com.example.baseapp.main.MainViewModel
 import com.example.baseapp.base.ui.BaseFragment
 import com.example.featurehome.databinding.FragmentFirstBinding
 import com.example.featurehome.featureHome.NavigationHome
@@ -12,7 +11,7 @@ import javax.inject.Inject
 import timber.log.Timber
 
 @AndroidEntryPoint
-class FirstFragment : BaseFragment<FragmentFirstBinding, MainViewModel>() {
+class FirstFragment : BaseFragment<FragmentFirstBinding, FirstViewModel>() {
 
     private lateinit var viewBinding : FragmentFirstBinding
     @Inject

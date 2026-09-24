@@ -1,13 +1,12 @@
 package com.example.featurehome
 
 import android.os.Bundle
-import com.example.baseapp.main.MainViewModel
 import com.example.baseapp.base.ui.BaseFragment
 import com.example.featurehome.databinding.FragmentSecondBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class SecondFragment : BaseFragment<FragmentSecondBinding, MainViewModel>() {
+class SecondFragment : BaseFragment<FragmentSecondBinding, SecondViewModel>() {
 
 
     private val binding : FragmentSecondBinding by lazy { FragmentSecondBinding.inflate(layoutInflater) }
